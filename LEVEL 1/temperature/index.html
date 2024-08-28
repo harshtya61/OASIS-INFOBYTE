@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temperature Converter</title>
+<style>
+    #box {
+        width: 900px;
+        height: 300px;
+        margin-top: 10%;
+        margin-left: 20%;
+        margin-right: 20%;
+        padding: 20px;
+        border: 1px black solid;
+        border-radius: 10px;
+        background-color: rgb(200, 227, 236);
+    }
+    
+    #result {
+        border: 1px black solid;
+        background-color: aliceblue;
+        border-radius: 2px;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    input {
+        padding: 5px;
+        margin: 10px;
+    }
+    select {
+        padding: 5px;
+        margin: 10px;
+    }
+    button {
+        padding: 5px 10px;
+        margin: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body id="body" style="background-color: rgb(16, 28, 88);">
+    <div class="box" id="box" >
+        <h1> Temperature Converter</h1> <br>
+        <input type="number" id="temperature" placeholder="Enter temperature">
+        <select id="unit">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+        </select>
+        <button onclick="convertTemperature()">Convert</button>
+        <div id="result"></div> <br>
+    </div>
+
+    <script>
+        function convertTemperature() {
+            const temperatureInput = parseFloat(document.getElementById('temperature').value);
+            const unit = document.getElementById('unit').value;
+            let convertedTemperature;
+
+            if (unit === 'celsius') {
+                convertedTemperature = (temperatureInput * 9/5) + 32;
+                document.getElementById('result').innerText = `${temperatureInput}°C is ${convertedTemperature}°F`;
+                setBackgroundColor(temperatureInput);
+            } else if (unit === 'fahrenheit') {
+                convertedTemperature = (temperatureInput - 32) * 5/9;
+                document.getElementById('result').innerText =` ${temperatureInput}°F is ${convertedTemperature}°C`;
+                setBackgroundColor(convertedTemperature);
+            } else if (unit === 'kelvin') {
+                convertedTemperature = temperatureInput - 273.15;
+                document.getElementById('result').innerText =` ${temperatureInput}K is ${convertedTemperature}°C`;
+                setBackgroundColor(convertedTemperature);
+            }
+        }
+        // Here i am adding new functionality to change the background colour according to the temperature
+        function setBackgroundColor(temperature) {
+            const body = document.getElementById('body');
+            if (temperature < 0) {
+                body.style.backgroundColor = 'rgb(0, 0, 139)'; // Dark Blue for very cold temperatures
+            } else if (temperature >= 0 && temperature <= 15) {
+                body.style.backgroundColor = 'rgb(0, 0, 255)'; // Blue for cold temperatures
+            } else if (temperature > 15 && temperature <= 30) {
+                body.style.backgroundColor = 'rgb(0, 255, 255)'; // Light Blue for moderate temperatures
+            } else if (temperature > 30 && temperature <= 45) {
+                body.style.backgroundColor = 'rgb(255, 165, 0)'; // Orange for warm temperatures
+            } else {
+                body.style.backgroundColor = 'rgb(246, 0,0)'; // Red for hot temperatures
+            }
+        }
+    </script>
+</body>
+</html>
