@@ -5,10 +5,9 @@ body, html {
     background-color: #000;
     color: white;
     box-sizing: border-box;
-    background-image: url('Star\ Wars\ _\ Concept\ Art.jpeg');
+    background-image: url('Solar\ Receiver\,\ James\ Combridge.jpg');
     background-size: cover;  
     background-position: center; 
-    background-repeat: no-repeat; 
     background-repeat: no-repeat; 
     background-attachment: scroll; 
 
@@ -108,7 +107,6 @@ body, html {
 
 .navbar a:hover {
     background-color: #dfe13e;
-    color: #000;
 }
 
 @media (max-width: 768px) {
@@ -137,19 +135,16 @@ body, html {
         gap: 10px;
     }
 }
-        .background-container {
+    .background-container
+      {
             position: relative;
             top: 50%;
             left: 39%;
             width: 60%;
-            height: 40%;
-            background-image: url('stree\ 2.jpeg'); /* Replace with your image URL */
-            background-size: cover;
-            background-position: center;
-            background-color: #dfe13e;
-        }
+            }
 
-        .catalog {
+    .catalog
+       {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -165,13 +160,11 @@ body, html {
         .catalog-item {
             background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
-            border-radius: 10px;
             text-align: center;
         }
 
         .catalog-item img {
             width: 100%;
-            border-radius: 5px;
         }
 
         .catalog-item h3 {
@@ -190,8 +183,5 @@ body, html {
             
         }
 
-        @media (max-width: 768px) {
-            .catalog {
-                grid-template-columns: 1fr;
-            }
-        }
+        
+        
