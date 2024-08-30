@@ -44,7 +44,7 @@ body, html {
     gap: 15px;
 }
 
-.btn-primary {
+.btn-1 {
     background-color: #0061FF;
     color: white;
     padding: 15px 20px;
@@ -57,11 +57,11 @@ body, html {
     transition: background-color 0.3s ease;
 }
 
-.btn-primary:hover {
+.btn-1:hover {
     background-color: #004BBB;
 }
 
-.btn-secondary {
+.btn-2 {
     background-color: transparent;
     border: 1px solid white;
     color: white;
@@ -73,7 +73,7 @@ body, html {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.btn-secondary:hover {
+.btn-2:hover {
     background-color: white;
     color: #000;
 }
@@ -107,6 +107,7 @@ body, html {
 
 .navbar a:hover {
     background-color: #dfe13e;
+    color: #000;
 }
 
 @media (max-width: 768px) {
