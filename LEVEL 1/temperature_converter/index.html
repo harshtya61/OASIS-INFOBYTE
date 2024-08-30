@@ -86,15 +86,15 @@
         function setBackgroundColor(temperature) {
             const body = document.getElementById('body');
             if (temperature < 0) {
-                body.style.backgroundColor = 'rgb(0, 0, 139)'; // Dark Blue for very cold temperatures
+                body.style.backgroundColor = 'rgba(0, 0, 139,0.8)'; // Dark Blue for very cold temperatures
             } else if (temperature >= 0 && temperature <= 15) {
-                body.style.backgroundColor = 'rgb(0, 0, 255)'; // Blue for cold temperatures
+                body.style.backgroundColor = 'rgba(0, 0, 255,0.8)'; // Blue for cold temperatures
             } else if (temperature > 15 && temperature <= 30) {
-                body.style.backgroundColor = 'rgb(0, 255, 255)'; // Light Blue for moderate temperatures
+                body.style.backgroundColor = 'rgba(0, 255, 255,0.8)'; // Light Blue for moderate temperatures
             } else if (temperature > 30 && temperature <= 45) {
-                body.style.backgroundColor = 'rgb(255, 165, 0)'; // Orange for warm temperatures
+                body.style.backgroundColor = 'rgba(255, 165, 0,0.8)'; // Orange for warm temperatures
             } else {
-                body.style.backgroundColor = 'rgb(246, 0,0)'; // Red for hot temperatures
+                body.style.backgroundColor = 'rgba(246, 0,0,0.8)'; // Red for hot temperatures
             }
         }
     </script>
