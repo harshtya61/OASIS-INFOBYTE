@@ -77,19 +77,27 @@ body, html {
     background-color: white;
     color: #000;
 }
-.ps {
+.a .atags {
     position: absolute;
-    top: 20px;
+    top: 25px;
+    right: 43%;
+    gap: 25px;
+    display: flex;
+}
+.a.atags:hover{
+    color: #000;
+}
+.primescreen{
+    position: absolute;
+    top: 25px;
     left: 20px;
     display: flex;
-    gap: 15px;
     font-style: italic;
-
 }
 .navbar {
     position: absolute;
     top: 20px;
-    right: 20px;
+    right:20px;
     display: flex;
     gap: 15px;
 }
@@ -183,5 +191,23 @@ body, html {
             
         }
 
-        
+       a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+       } 
+       a:hover {
+        color: black;
+        scale: 1.1;
+       }
+       .socialmedia{
+        margin-left: 50px;
+       }
+       .socialmedia a img {
+        width: 40px;
+        height: 40px;
+        border: 1px solid black;
+        border-radius: 50%;
+    }
+    
         
